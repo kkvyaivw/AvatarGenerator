@@ -85,9 +85,9 @@ function load(n, m, Srgb = new rgbObj()) {
         if (typeof(bs) == "undefined") { 
             bs = ""
         }  
-        bs += "<div style='margin-top: 0px;margin-left: 0px;height:1px'>"
+        bs += "<div class='line'>"
         for(var j=1;j<=m;j++) {
-            bs += "<div style='float:left;margin-top:0px;margin-left:0px;width:1px;height:1px;background-color:rgb(" + Math.floor(clr[i][j][0]) + "," + Math.floor(clr[i][j][1]) + "," + Math.floor(clr[i][j][2]) + ")'></div>"
+            bs += "<div class='grid'style='background:rgb(" + Math.floor(clr[i][j][0]) + "," + Math.floor(clr[i][j][1]) + "," + Math.floor(clr[i][j][2]) + ")'></div>"
             //console.log(clr[i][j][0]);
             //console.log(i+" "+j+" "+clr[i][j][0])
         }
