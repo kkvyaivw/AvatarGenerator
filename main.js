@@ -69,8 +69,8 @@ function load(n, m, Srgb = new rgbObj()) {
             } else {
                 var randN = Math.floor(Math.random()*3)
                 clr[i][j][0] = clr[i][j-1][0];
-                clr[i][j] = clr[i][j-1];
-                clr[i][j] = clr[i][j-1];
+                clr[i][j][1] = clr[i][j-1][1];
+                clr[i][j][2] = clr[i][j-1][2];
                 clr[i][j][randN] = clr[i][j][randN] - Math.random()*2;
                 if(clr[i][j][randN]<0) {
                     //cnt++;
@@ -87,7 +87,7 @@ function load(n, m, Srgb = new rgbObj()) {
         }  
         bs += "<div style='margin-top: 0px;margin-left: 0px;height:1px'>"
         for(var j=1;j<=m;j++) {
-            bs += "<div style='float:left;margin-top:0px;margin-left:0px;width:1px;height:1px;background-color:rgb(" + Math.ceil(clr[i][j][0]) + "," + Math.ceil(clr[i][j][1]) + "," + Math.ceil(clr[i][j][2]) + ")'></div>"
+            bs += "<div style='float:left;margin-top:0px;margin-left:0px;width:1px;height:1px;background-color:rgb(" + Math.floor(clr[i][j][0]) + "," + Math.floor(clr[i][j][1]) + "," + Math.floor(clr[i][j][2]) + ")'></div>"
             //console.log(clr[i][j][0]);
             //console.log(i+" "+j+" "+clr[i][j][0])
         }
